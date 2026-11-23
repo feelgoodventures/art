@@ -29,6 +29,7 @@ export default function ArtCard({ art }: { art: Artwork }) {
             width={570}
             height={712}
             className="art-img"
+            unoptimized
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 280px"
           />
         ) : (
