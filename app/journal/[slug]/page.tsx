@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ArtGrid from "@/components/ArtGrid";
-import Cover from "@/components/Cover";
+import Collage from "@/components/Collage";
 import Signup from "@/components/Signup";
 import { getPost, posts } from "@/lib/posts";
 import { getStyle } from "@/lib/styles";
@@ -61,7 +61,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </div>
         <div className="wrap" style={{ maxWidth: 1000 }}>
           <div className="cover">
-            <Cover tones={post.tones} />
+            <Collage items={picks} tones={post.tones} />
           </div>
         </div>
         <div className="wrap narrow prose">{post.body}</div>
