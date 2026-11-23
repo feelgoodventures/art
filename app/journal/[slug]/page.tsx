@@ -10,7 +10,7 @@ import { getArtForStyle } from "@/lib/etsy";
 import { formatDate } from "@/lib/date";
 import { site } from "@/lib/site";
 
-export const revalidate = 86400;
+export const revalidate = 21600;
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));

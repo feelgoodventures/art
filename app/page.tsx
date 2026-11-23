@@ -8,7 +8,7 @@ import { styles } from "@/lib/styles";
 import { getArtForStyle } from "@/lib/etsy";
 import { posts } from "@/lib/posts";
 
-export const revalidate = 86400;
+export const revalidate = 21600;
 
 export default async function Home() {
   const [abstract, boho, botanical, minimal] = await Promise.all([

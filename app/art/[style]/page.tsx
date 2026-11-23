@@ -6,7 +6,7 @@ import { getStyle, styles } from "@/lib/styles";
 import { getArtForStyle } from "@/lib/etsy";
 import { site } from "@/lib/site";
 
-export const revalidate = 86400;
+export const revalidate = 21600;
 
 export function generateStaticParams() {
   return styles.map((s) => ({ style: s.slug }));

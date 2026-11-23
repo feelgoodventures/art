@@ -11,7 +11,29 @@ export type Artwork = {
 };
 
 const API = "https://openapi.etsy.com/v3/application";
-const DAY = 60 * 60 * 24;
+const REFRESH = 60 * 60 * 6; // re-check Etsy every 6 hours
+const PER_STYLE = 24;
+
+// Etsy allows only a few requests per second, so calls go out one at a time,
+// spaced apart, and retry when Etsy says "too many requests" (429).
+let queue: Promise<unknown> = Promise.resolve();
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+function etsyFetch(url: URL, headers: Record<string, string>): Promise<Response> {
+  const run = async () => {
+    for (let attempt = 0; ; attempt++) {
+      const res = await fetch(url, { headers, next: { revalidate: REFRESH } });
+      if (res.status !== 429 || attempt >= 5) return res;
+      const wait = Number(res.headers.get("retry-after")) * 1000 || 1000 * 2 ** attempt;
+      await sleep(Math.min(wait, 15000));
+    }
+  };
+  const next = queue.then(run, run);
+  queue = next.then(() => sleep(250), () => sleep(250));
+  return next;
+}
+
+const memo = new Map<string, Promise<Artwork[]>>();
 
 function apiKeyHeader() {
   const key = process.env.ETSY_API_KEY;
@@ -75,10 +97,21 @@ function sampleArt(style: ArtStyle, count: number): Artwork[] {
  * at most once a day (ISR), so the site refreshes itself with no manual work.
  */
 export async function getArtForStyle(style: ArtStyle, count = 24): Promise<Artwork[]> {
+  let all = memo.get(style.slug);
+  if (!all) {
+    all = loadStyle(style);
+    memo.set(style.slug, all);
+  }
+  const items = await all;
+  return items.slice(0, count);
+}
+
+async function loadStyle(style: ArtStyle): Promise<Artwork[]> {
+  const count = PER_STYLE;
   const header = apiKeyHeader();
   if (!header) {
     console.warn("[etsy] ETSY_API_KEY is not set; showing sample art.");
-    return sampleArt(style, Math.min(count, 12));
+    return sampleArt(style, 12);
   }
 
   try {
@@ -87,7 +120,7 @@ export async function getArtForStyle(style: ArtStyle, count = 24): Promise<Artwo
     search.searchParams.set("keywords", style.keywords);
     search.searchParams.set("limit", String(Math.min(count + 8, 100)));
     search.searchParams.set("sort_on", "score");
-    const res = await fetch(search, { headers, next: { revalidate: DAY } });
+    const res = await etsyFetch(search, headers);
     if (!res.ok) throw new Error(`Etsy search ${res.status}: ${(await res.text()).slice(0, 300)}`);
     const found = (await res.json()) as { results: { listing_id: number }[] };
     const ids = found.results.map((r) => r.listing_id);
@@ -96,7 +129,7 @@ export async function getArtForStyle(style: ArtStyle, count = 24): Promise<Artwo
     const batch = new URL(`${API}/listings/batch`);
     batch.searchParams.set("listing_ids", ids.join(","));
     batch.searchParams.set("includes", "Images");
-    const res2 = await fetch(batch, { headers, next: { revalidate: DAY } });
+    const res2 = await etsyFetch(batch, headers);
     if (!res2.ok) throw new Error(`Etsy batch ${res2.status}: ${(await res2.text()).slice(0, 300)}`);
     const data = (await res2.json()) as {
       results: {
@@ -122,6 +155,7 @@ export async function getArtForStyle(style: ArtStyle, count = 24): Promise<Artwo
       }));
   } catch (err) {
     console.error("[etsy] Etsy fetch failed, showing sample art:", err);
+    memo.delete(style.slug);
     return sampleArt(style, 12);
   }
 }
