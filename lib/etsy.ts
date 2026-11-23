@@ -76,7 +76,10 @@ function sampleArt(style: ArtStyle, count: number): Artwork[] {
  */
 export async function getArtForStyle(style: ArtStyle, count = 24): Promise<Artwork[]> {
   const header = apiKeyHeader();
-  if (!header) return sampleArt(style, Math.min(count, 12));
+  if (!header) {
+    console.warn("[etsy] ETSY_API_KEY is not set; showing sample art.");
+    return sampleArt(style, Math.min(count, 12));
+  }
 
   try {
     const headers = { "x-api-key": header };
@@ -85,7 +88,7 @@ export async function getArtForStyle(style: ArtStyle, count = 24): Promise<Artwo
     search.searchParams.set("limit", String(Math.min(count + 8, 100)));
     search.searchParams.set("sort_on", "score");
     const res = await fetch(search, { headers, next: { revalidate: DAY } });
-    if (!res.ok) throw new Error(`Etsy search ${res.status}`);
+    if (!res.ok) throw new Error(`Etsy search ${res.status}: ${(await res.text()).slice(0, 300)}`);
     const found = (await res.json()) as { results: { listing_id: number }[] };
     const ids = found.results.map((r) => r.listing_id);
     if (!ids.length) return sampleArt(style, 12);
@@ -94,7 +97,7 @@ export async function getArtForStyle(style: ArtStyle, count = 24): Promise<Artwo
     batch.searchParams.set("listing_ids", ids.join(","));
     batch.searchParams.set("includes", "Images");
     const res2 = await fetch(batch, { headers, next: { revalidate: DAY } });
-    if (!res2.ok) throw new Error(`Etsy batch ${res2.status}`);
+    if (!res2.ok) throw new Error(`Etsy batch ${res2.status}: ${(await res2.text()).slice(0, 300)}`);
     const data = (await res2.json()) as {
       results: {
         listing_id: number;
@@ -118,7 +121,7 @@ export async function getArtForStyle(style: ArtStyle, count = 24): Promise<Artwo
         tones: style.tones,
       }));
   } catch (err) {
-    console.error("Etsy fetch failed, showing samples:", err);
+    console.error("[etsy] Etsy fetch failed, showing sample art:", err);
     return sampleArt(style, 12);
   }
 }
