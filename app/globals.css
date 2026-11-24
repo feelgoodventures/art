@@ -1,6 +1,7 @@
 :root {
   --bg: #faf7f2;
   --surface: #f2ece3;
+  --frame: #f0ede8;
   --ink: #2a2724;
   --muted: #6f6860;
   --line: #e3dbcf;
@@ -57,7 +58,7 @@ p { margin: 0 0 1.1em; }
 /* Style tiles */
 .style-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .style-tile { text-decoration: none; display: block; }
-.collage { width: 100%; height: 100%; display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; overflow: hidden; background: var(--surface); }
+.collage { width: 100%; height: 100%; display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; overflow: hidden; background: var(--frame); }
 .collage > :first-child { grid-row: span 2; }
 .collage img, .collage i { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 0; transition: transform 0.6s ease; }
 .style-tile .collage { aspect-ratio: 4 / 3; height: auto; }
@@ -69,8 +70,10 @@ p { margin: 0 0 1.1em; }
 /* Art grid */
 .art-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 24px; }
 .art-card { text-decoration: none; display: block; }
-.art-frame { background: var(--surface); aspect-ratio: 4 / 5; overflow: hidden; }
+.art-frame { background: var(--frame); aspect-ratio: 4 / 5; overflow: hidden; }
 .art-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+/* Multiply blends any white in Etsy photos (borders, white backdrops) into the soft frame color. */
+.art-frame img, .collage img { mix-blend-mode: multiply; }
 .art-card:hover .art-img { transform: scale(1.04); }
 .art-meta { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: 0.92rem; }
 .art-title { line-height: 1.4; }
