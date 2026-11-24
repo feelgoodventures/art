@@ -33,6 +33,9 @@ function etsyFetch(url: URL, headers: Record<string, string>): Promise<Response>
   return next;
 }
 
+const NOT_PAINTING =
+  /\b(prints?|printable|poster|giclee|giclée|reproduction|digital|download|instant|canvas print|art print|wall decal|sticker|svg|png|jpg|pdf|file|template|set of \d+ prints)\b/i;
+
 const memo = new Map<string, Promise<Artwork[]>>();
 
 function apiKeyHeader() {
@@ -118,12 +121,18 @@ async function loadStyle(style: ArtStyle): Promise<Artwork[]> {
     const headers = { "x-api-key": header };
     const search = new URL(`${API}/listings/active`);
     search.searchParams.set("keywords", style.keywords);
-    search.searchParams.set("limit", String(Math.min(count + 8, 100)));
+    search.searchParams.set("limit", "100");
     search.searchParams.set("sort_on", "score");
     const res = await etsyFetch(search, headers);
     if (!res.ok) throw new Error(`Etsy search ${res.status}: ${(await res.text()).slice(0, 300)}`);
-    const found = (await res.json()) as { results: { listing_id: number }[] };
-    const ids = found.results.map((r) => r.listing_id);
+    const found = (await res.json()) as {
+      results: { listing_id: number; title: string; is_digital?: boolean; description?: string }[];
+    };
+    // Paintings only: drop prints, posters, reproductions and digital downloads.
+    const ids = found.results
+      .filter((r) => !r.is_digital && !NOT_PAINTING.test(decode(r.title)))
+      .map((r) => r.listing_id)
+      .slice(0, count + 8);
     if (!ids.length) return sampleArt(style, 12);
 
     const batch = new URL(`${API}/listings/batch`);

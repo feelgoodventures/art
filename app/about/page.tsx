@@ -18,7 +18,7 @@ export default function About() {
           but finding the right piece for your space can take hours of scrolling.
         </p>
         <p>
-          So we built a calmer way to browse. We gather prints and paintings from makers on Etsy and organize them by
+          So we built a calmer way to browse. We gather original paintings from artists on Etsy and organize them by
           style, then pair them with practical guides on choosing sizes, building gallery walls and styling every
           room.
         </p>

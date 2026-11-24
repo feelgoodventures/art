@@ -25,7 +25,7 @@ export const posts: Post[] = [
     body: (
       <>
         <p>
-          The most common wall art mistake is not the style. It is the size. A print that looked perfect online can
+          The most common wall art mistake is not the style. It is the size. A painting that looked perfect online can
           end up floating like a postage stamp on a big wall, or swallowing a narrow hallway. The good news is that a
           few simple rules take the guesswork out of it.
         </p>
@@ -43,7 +43,7 @@ export const posts: Post[] = [
         <p>
           With no furniture underneath, look at the wall itself. A single piece should take up roughly 60 to 75
           percent of the open wall space you want to fill. If one piece that size is out of budget, a gallery wall or
-          a set of two or three matching prints can fill the same area for less.
+          a pair or trio of smaller paintings can fill the same area for less.
         </p>
         <h2>How high to hang it</h2>
         <p>
@@ -66,8 +66,8 @@ export const posts: Post[] = [
         <h2>When in doubt, go bigger</h2>
         <p>
           Art that is slightly too large almost always looks more intentional than art that is too small. Before you
-          buy, tape a piece of paper the size of the print to your wall and live with it for a day. Many Etsy artists
-          also sell the same design in several sizes, so you can choose the one that fits.
+          buy, tape a piece of paper the size of the painting to your wall and live with it for a day. Many Etsy artists
+          also take commissions in custom sizes, so you can get the one that fits.
         </p>
         <p>
           Ready to browse? Start with our <Link href="/art/abstract-wall-art">abstract wall art</Link> collection,
@@ -95,7 +95,7 @@ export const posts: Post[] = [
         <h2>Pick a thread that ties it together</h2>
         <p>
           The best gallery walls share at least one thing: a color palette, a subject, a frame finish or a style.
-          Botanical prints in mixed frames, or a mix of subjects in matching black frames, both work. Mixing
+          Botanical paintings in mixed frames, or a mix of subjects in matching black frames, both work. Mixing
           everything at once is what tips it into clutter.
         </p>
         <h2>Three layouts that always work</h2>
@@ -125,12 +125,12 @@ export const posts: Post[] = [
           real pieces right over the templates.
         </p>
         <div className="callout">
-          Renting? Strong adhesive strips hold most framed prints up to 16 x 20 inches, and they come off without
+          Renting? Strong adhesive strips hold many small framed paintings up to 16 x 20 inches, and they come off without
           damaging paint.
         </div>
         <h2>Where to find pieces that go together</h2>
         <p>
-          Many Etsy artists sell prints in coordinated sets of two, three or six, which makes a gallery wall almost
+          Many Etsy painters create small works in coordinated series, which makes a gallery wall almost
           effortless. Browse our <Link href="/art/botanical-wall-art">botanical</Link> and{" "}
           <Link href="/art/minimalist-wall-art">minimalist</Link> collections for pieces that pair easily.
         </p>
@@ -162,23 +162,23 @@ export const posts: Post[] = [
           <li>Suns, arches and rainbows in muted, earthy shades</li>
           <li>Abstract organic shapes and soft line work</li>
           <li>Desert landscapes, palms and dried florals</li>
-          <li>Woven textures and fiber-art-inspired prints</li>
+          <li>Textured, layered brushwork and fiber-art-inspired pieces</li>
         </ul>
         <h2>Room by room</h2>
         <p>
           <strong>Living room:</strong> anchor the sofa wall with one large abstract in warm tones, or create a
-          relaxed salon-style gallery wall mixing prints with a round mirror.
+          relaxed salon-style gallery wall mixing small paintings with a round mirror.
         </p>
         <p>
-          <strong>Bedroom:</strong> a pair of arch or sun prints above the bed feels calm and balanced.
+          <strong>Bedroom:</strong> a pair of arch or sun paintings above the bed feels calm and balanced.
         </p>
         <p>
-          <strong>Entryway:</strong> one small, cheerful print sets the tone the moment someone walks in.
+          <strong>Entryway:</strong> one small, cheerful painting sets the tone the moment someone walks in.
         </p>
         <h2>Frame it naturally</h2>
         <p>
           Light oak, rattan and natural wood frames suit boho art perfectly. For an even more relaxed look, try
-          hanging unframed prints with wooden poster hangers.
+          displaying a small unframed canvas on a picture ledge.
         </p>
         <p>
           Explore our full <Link href="/art/boho-wall-art">boho wall art</Link> collection, refreshed daily with new
@@ -214,20 +214,20 @@ export const posts: Post[] = [
         </p>
         <h2>3. Lean it</h2>
         <p>
-          A large framed print leaning on a dresser, console or mantel looks effortlessly styled. Layer a smaller
+          A large canvas leaning on a dresser, console or mantel looks effortlessly styled. Layer a smaller
           piece in front for depth.
         </p>
-        <h2>4. Poster hangers and clips</h2>
+        <h2>4. Adhesive hooks for small pieces</h2>
         <p>
-          Wooden magnetic hangers suit unframed prints beautifully and need only a single adhesive hook at the top.
+          Small paintings on panel or paper can hang from a single adhesive hook, no nails needed.
         </p>
         <h2>5. Tension rods and easels</h2>
         <p>
           A floor easel turns one oversized piece into a gallery-style focal point, no wall required.
         </p>
         <div className="callout">
-          Tip: lightweight paper prints and thin frames are the easiest to hang damage-free. Many Etsy artists offer
-          prints in standard sizes that fit affordable ready-made frames.
+          Tip: small paintings on paper or thin panel are the easiest to hang damage-free. Many Etsy artists offer
+          pieces in standard sizes that fit affordable ready-made frames.
         </div>
         <p>
           Looking for something light and simple? Browse our{" "}

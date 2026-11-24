@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ style: st
   const style = getStyle((await params).style);
   if (!style) return {};
   return {
-    title: `${style.title}: Curated Prints from Independent Artists`,
-    description: `${style.blurb} Browse curated ${style.name.toLowerCase()} wall art from Etsy artists, refreshed daily.`,
+    title: `${style.title}: Original Art from Independent Artists`,
+    description: `${style.blurb} Browse original ${style.name.toLowerCase()} paintings from independent Etsy artists, refreshed daily.`,
     alternates: { canonical: `/art/${style.slug}` },
   };
 }
