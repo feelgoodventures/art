@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { styles } from "@/lib/styles";
+import { site } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -28,6 +29,9 @@ export default function Footer() {
           <Link href="/about">About</Link>
           <Link href="/disclosure">Affiliate disclosure</Link>
           <Link href="/privacy">Privacy policy</Link>
+          <a href={site.instagram} target="_blank" rel="noopener noreferrer">
+            Instagram @wallglamup
+          </a>
         </div>
       </div>
       <div className="wrap legal">
