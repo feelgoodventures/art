@@ -32,7 +32,7 @@ export default function AppPage() {
               </div>
               <div>
                 <h3>Buy from trusted sellers</h3>
-                <p className="muted">Every piece links straight to where it&apos;s sold.</p>
+                <p className="muted">Every piece links straight to the seller&apos;s shop.</p>
               </div>
             </div>
           </div>

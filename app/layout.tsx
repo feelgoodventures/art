@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name} | ${site.tagline}`, template: `%s | ${site.name}` },
   description: site.description,
+  keywords: ["original paintings", "wall art", "Etsy paintings", "Etsy wall art", "original art for sale", "art for living room", "gallery wall ideas"],
   openGraph: { siteName: site.name, type: "website", description: site.description },
   twitter: { card: "summary_large_image" },
 };

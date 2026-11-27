@@ -24,7 +24,7 @@ export default function About() {
         </p>
         <h2>How it works</h2>
         <p>
-          When you find something you love, tap it and you will go straight to the listing where it&apos;s sold. Our collections refresh every day, so there is always
+          When you find something you love, tap it and you will go straight to the seller&apos;s shop to buy. Our collections refresh every day, so there is always
           something new to discover.
         </p>
         <h2>Supporting artists</h2>

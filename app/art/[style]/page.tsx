@@ -17,8 +17,9 @@ export async function generateMetadata({ params }: { params: Promise<{ style: st
   if (!style) return {};
   return {
     title: `${style.title}: Curated Original Paintings`,
-    description: `${style.blurb} Browse original ${style.name.toLowerCase()} paintings from marketplaces, galleries and artists, refreshed daily.`,
+    description: `${style.blurb} Browse original ${style.name.toLowerCase()} paintings from Etsy and other marketplaces, galleries and artists, refreshed daily.`,
     alternates: { canonical: `/art/${style.slug}` },
+    keywords: [`${style.name.toLowerCase()} painting`, `original ${style.name.toLowerCase()} art`, `${style.name.toLowerCase()} wall art`, "Etsy paintings", "original paintings"],
   };
 }
 
@@ -71,7 +72,7 @@ export default async function StylePage({ params }: { params: Promise<{ style: s
         <div className="wrap">
           <ArtGrid items={art} />
           <p className="sample-note">
-            Prices and availability are set by each seller and may change. Tap any piece to see it where it&apos;s sold.
+            Prices and availability are set by each seller and may change. Tap any piece to view it in the seller&apos;s shop.
           </p>
         </div>
       </section>

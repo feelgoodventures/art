@@ -4,7 +4,7 @@ import StyleTiles from "@/components/StyleTiles";
 export const metadata: Metadata = {
   title: "Wall Art by Style",
   description:
-    "Browse curated wall art by style: abstract, boho, botanical, minimalist, vintage and coastal original paintings from marketplaces, galleries and artists.",
+    "Browse curated wall art by style: abstract, boho, botanical, minimalist, vintage and coastal original paintings from Etsy and other marketplaces, galleries and artists.",
   alternates: { canonical: "/art" },
 };
 
