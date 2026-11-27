@@ -29,7 +29,7 @@ export default function Privacy() {
         </ul>
         <h2>Affiliate links and cookies</h2>
         <p>
-          When you click through to a marketplace or artist shop, our affiliate partners may set a cookie so that a purchase
+          When you click through to a seller&apos;s shop, our affiliate partners (such as Rakuten) may set a cookie so that a purchase
           can be credited to WallGlamUp. These cookies do not give us access to your personal or payment details.
           Purchases happen entirely on the seller&apos;s site (for example, Etsy) and are covered by that seller&apos;s own privacy policy.
         </p>

@@ -36,7 +36,7 @@ export default function Footer() {
           certified by Etsy, Inc.
         </p>
         <p>
-          WallGlamUp may earn a commission when you buy through links on this site, at no extra cost to you.{" "}
+          WallGlamUp may earn a commission, including through affiliate networks such as Rakuten, when you buy through links on this site, at no extra cost to you.{" "}
           <Link href="/disclosure">Learn more</Link>.
         </p>
         <p>© 2026 Feelgood Ventures LLC. All rights reserved.</p>

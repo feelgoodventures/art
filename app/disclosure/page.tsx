@@ -13,7 +13,7 @@ export default function Disclosure() {
         <h1>Affiliate disclosure</h1>
         <p className="meta">Last updated November 23, 2026</p>
         <p>
-          WallGlamUp is a participant in affiliate programs, including programs run by the marketplaces we link to, such as Etsy. This means that
+          WallGlamUp is a participant in affiliate programs, including programs run by the marketplaces we link to, such as Etsy, and affiliate networks such as Rakuten. This means that
           when you click a link on our site and make a purchase, we may earn a small commission. This comes at no
           extra cost to you, and the price you pay is exactly the same.
         </p>
