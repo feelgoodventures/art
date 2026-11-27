@@ -6,6 +6,7 @@ export type Artwork = {
   price: string;
   image?: string;
   url: string;
+  source: string;
   tones: [string, string, string];
   sample?: boolean;
 };
@@ -90,6 +91,7 @@ function sampleArt(style: ArtStyle, count: number): Artwork[] {
     title: `${style.name} study no. ${i + 1}`,
     price: "",
     url: `https://www.etsy.com/search?q=${encodeURIComponent(style.keywords)}`,
+    source: "Etsy",
     tones: rotations[i % 3],
     sample: true,
   }));
@@ -160,6 +162,7 @@ async function loadStyle(style: ArtStyle): Promise<Artwork[]> {
         price: formatPrice(l.price),
         image: l.images?.[0]?.url_570xN || l.images?.[0]?.url_fullxfull,
         url: l.url,
+        source: "Etsy",
         tones: style.tones,
       }));
   } catch (err) {

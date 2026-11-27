@@ -13,7 +13,7 @@ export default function Disclosure() {
         <h1>Affiliate disclosure</h1>
         <p className="meta">Last updated November 23, 2026</p>
         <p>
-          WallGlamUp is a participant in affiliate programs, including the Etsy affiliate program. This means that
+          WallGlamUp is a participant in affiliate programs, including programs run by the marketplaces we link to, such as Etsy. This means that
           when you click a link on our site and make a purchase, we may earn a small commission. This comes at no
           extra cost to you, and the price you pay is exactly the same.
         </p>
@@ -22,8 +22,8 @@ export default function Disclosure() {
           aim to feature art based on style and quality.
         </p>
         <p>
-          All purchases are made on Etsy, directly from the independent seller. Questions about an order, shipping or
-          returns should go to the seller through Etsy.
+          All purchases are made on the seller&apos;s marketplace, directly from the independent seller. Questions about an
+          order, shipping or returns should go to the seller through that marketplace.
         </p>
         <p>
           The term &quot;Etsy&quot; is a trademark of Etsy, Inc. This application uses the Etsy API but is not

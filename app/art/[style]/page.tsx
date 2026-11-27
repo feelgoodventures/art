@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ style: st
   if (!style) return {};
   return {
     title: `${style.title}: Original Art from Independent Artists`,
-    description: `${style.blurb} Browse original ${style.name.toLowerCase()} paintings from independent Etsy artists, refreshed daily.`,
+    description: `${style.blurb} Browse original ${style.name.toLowerCase()} paintings from independent artists, refreshed daily.`,
     alternates: { canonical: `/art/${style.slug}` },
   };
 }
@@ -71,7 +71,7 @@ export default async function StylePage({ params }: { params: Promise<{ style: s
         <div className="wrap">
           <ArtGrid items={art} />
           <p className="sample-note">
-            Prices and availability are set by each seller on Etsy and may change. Tap any piece to view it on Etsy.
+            Prices and availability are set by each artist and may change. Tap any piece to view it in the artist&apos;s shop.
           </p>
         </div>
       </section>

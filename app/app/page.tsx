@@ -32,7 +32,7 @@ export default function AppPage() {
               </div>
               <div>
                 <h3>Buy straight from the artist</h3>
-                <p className="muted">Every piece links directly to its maker&apos;s Etsy shop.</p>
+                <p className="muted">Every piece links straight to the artist&apos;s own shop.</p>
               </div>
             </div>
           </div>

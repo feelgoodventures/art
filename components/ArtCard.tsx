@@ -40,7 +40,7 @@ export default function ArtCard({ art }: { art: Artwork }) {
         <span className="art-title">{art.title}</span>
         {art.price && <span className="art-price">{art.price}</span>}
       </div>
-      <span className="art-cta">View on Etsy →</span>
+      <span className="art-cta">View on {art.source} →</span>
     </a>
   );
 }

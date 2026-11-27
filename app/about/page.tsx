@@ -18,13 +18,13 @@ export default function About() {
           but finding the right piece for your space can take hours of scrolling.
         </p>
         <p>
-          So we built a calmer way to browse. We gather original paintings from artists on Etsy and organize them by
+          So we built a calmer way to browse. We gather original paintings from independent artists across trusted marketplaces and organize them by
           style, then pair them with practical guides on choosing sizes, building gallery walls and styling every
           room.
         </p>
         <h2>How it works</h2>
         <p>
-          Every piece you see is sold by its artist on Etsy. When you find something you love, tap it and you will go
+          Every piece you see is sold by its artist. When you find something you love, tap it and you will go
           straight to the artist&apos;s listing to buy. Our collections refresh every day, so there is always
           something new to discover.
         </p>

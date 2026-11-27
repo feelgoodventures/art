@@ -66,7 +66,7 @@ export const posts: Post[] = [
         <h2>When in doubt, go bigger</h2>
         <p>
           Art that is slightly too large almost always looks more intentional than art that is too small. Before you
-          buy, tape a piece of paper the size of the painting to your wall and live with it for a day. Many Etsy artists
+          buy, tape a piece of paper the size of the painting to your wall and live with it for a day. Many independent artists
           also take commissions in custom sizes, so you can get the one that fits.
         </p>
         <p>
@@ -130,7 +130,7 @@ export const posts: Post[] = [
         </div>
         <h2>Where to find pieces that go together</h2>
         <p>
-          Many Etsy painters create small works in coordinated series, which makes a gallery wall almost
+          Many independent painters create small works in coordinated series, which makes a gallery wall almost
           effortless. Browse our <Link href="/art/botanical-wall-art">botanical</Link> and{" "}
           <Link href="/art/minimalist-wall-art">minimalist</Link> collections for pieces that pair easily.
         </p>
@@ -226,7 +226,7 @@ export const posts: Post[] = [
           A floor easel turns one oversized piece into a gallery-style focal point, no wall required.
         </p>
         <div className="callout">
-          Tip: small paintings on paper or thin panel are the easiest to hang damage-free. Many Etsy artists offer
+          Tip: small paintings on paper or thin panel are the easiest to hang damage-free. Many independent artists offer
           pieces in standard sizes that fit affordable ready-made frames.
         </div>
         <p>

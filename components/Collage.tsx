@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Artwork } from "@/lib/etsy";
 
-/** Three Etsy images in a 2-column collage; falls back to color blocks for samples. */
+/** Three artwork images in a 2-column collage; falls back to color blocks for samples. */
 export default function Collage({ items, tones }: { items: Artwork[]; tones: [string, string, string] }) {
   const pics = items.filter((a) => a.image).slice(0, 3);
   if (pics.length < 3) {

@@ -27,7 +27,7 @@ export default async function Home() {
             <span className="eyebrow">Original paintings from independent artists</span>
             <h1>Find the art your walls have been waiting for.</h1>
             <p className="lead">
-              WallGlamUp gathers original paintings from independent Etsy artists and organizes them by style, so you
+              WallGlamUp gathers original paintings from independent artists across the web and organizes them by style, so you
               can discover something you love in minutes, not hours.
             </p>
             <div className="hero-actions">
