@@ -39,7 +39,7 @@ export default function Footer() {
           WallGlamUp may earn a commission, including through affiliate networks such as Rakuten, when you buy through links on this site, at no extra cost to you.{" "}
           <Link href="/disclosure">Learn more</Link>.
         </p>
-        <p>© 2026 Feelgood Ventures LLC. All rights reserved.</p>
+        <p>© 2026 Feelgood Ventures LLC. All rights reserved. Created by Priya Patel.</p>
       </div>
     </footer>
   );
