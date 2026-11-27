@@ -22,8 +22,8 @@ export default function Disclosure() {
           aim to feature art based on style and quality.
         </p>
         <p>
-          All purchases are made on the seller&apos;s marketplace, directly from the independent seller. Questions about an
-          order, shipping or returns should go to the seller through that marketplace.
+          All purchases are made with the seller, whether that is a marketplace, a gallery or an artist. Questions about an
+          order, shipping or returns should go to the seller.
         </p>
         <p>
           The term &quot;Etsy&quot; is a trademark of Etsy, Inc. This application uses the Etsy API but is not

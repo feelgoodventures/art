@@ -24,10 +24,10 @@ export default async function Home() {
       <section className="hero">
         <div className="wrap hero-grid">
           <div>
-            <span className="eyebrow">Original paintings from independent artists</span>
+            <span className="eyebrow">Original paintings, thoughtfully curated</span>
             <h1>Find the art your walls have been waiting for.</h1>
             <p className="lead">
-              WallGlamUp gathers original paintings from independent artists across the web and organizes them by style, so you
+              WallGlamUp brings together original paintings from marketplaces, galleries and artists, organized by style, so you
               can discover something you love in minutes, not hours.
             </p>
             <div className="hero-actions">

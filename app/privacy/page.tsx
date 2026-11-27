@@ -31,11 +31,11 @@ export default function Privacy() {
         <p>
           When you click through to a marketplace or artist shop, our affiliate partners may set a cookie so that a purchase
           can be credited to WallGlamUp. These cookies do not give us access to your personal or payment details.
-          Purchases happen entirely on the seller&apos;s marketplace (such as Etsy) and are covered by that marketplace&apos;s own privacy policy.
+          Purchases happen entirely on the seller&apos;s site (for example, Etsy) and are covered by that seller&apos;s own privacy policy.
         </p>
         <h2>Marketplace content</h2>
         <p>
-          Listing images, titles and prices are provided by the marketplaces we work with (including through the Etsy API) and belong to their respective sellers.
+          Listing images, titles and prices are provided by the marketplaces, galleries and artists we work with (including through the Etsy API) and belong to their respective sellers.
         </p>
         <h2>Sharing your information</h2>
         <p>We do not sell your personal information. We share it only with services that help us run the site, such as our email provider and hosting.</p>

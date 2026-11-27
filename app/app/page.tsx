@@ -24,15 +24,15 @@ export default function AppPage() {
             <div className="feature-list">
               <div>
                 <h3>Discover by style</h3>
-                <p className="muted">Browse curated art from independent artists, refreshed every day.</p>
+                <p className="muted">Browse original paintings curated from marketplaces, galleries and artists, refreshed every day.</p>
               </div>
               <div>
                 <h3>Save your favorites</h3>
                 <p className="muted">Keep a wishlist for every room and come back to it any time.</p>
               </div>
               <div>
-                <h3>Buy straight from the artist</h3>
-                <p className="muted">Every piece links straight to the artist&apos;s own shop.</p>
+                <h3>Buy from trusted sellers</h3>
+                <p className="muted">Every piece links straight to where it&apos;s sold.</p>
               </div>
             </div>
           </div>

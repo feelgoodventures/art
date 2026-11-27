@@ -10,7 +10,7 @@ export default function Footer() {
             WallGlam<span>Up</span>
           </p>
           <p className="muted">
-            Wall art from independent artists, curated by style and room. Every piece is sold directly by its maker.
+            Original paintings curated by style and room, sourced from marketplaces, galleries and artists.
           </p>
         </div>
         <div>

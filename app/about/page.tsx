@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About WallGlamUp",
-  description: "WallGlamUp helps you discover beautiful wall art from independent artists, organized by style.",
+  description: "WallGlamUp helps you discover original paintings from marketplaces, galleries and artists, organized by style.",
   alternates: { canonical: "/about" },
 };
 
@@ -14,23 +14,22 @@ export default function About() {
         <span className="eyebrow">About</span>
         <h1>Art for every wall, from the people who make it</h1>
         <p>
-          WallGlamUp started with a simple frustration: there is so much wonderful art made by independent artists,
+          WallGlamUp started with a simple frustration: there is so much wonderful original art out there,
           but finding the right piece for your space can take hours of scrolling.
         </p>
         <p>
-          So we built a calmer way to browse. We gather original paintings from independent artists across trusted marketplaces and organize them by
+          So we built a calmer way to browse. We gather original paintings from trusted marketplaces, galleries and artists and organize them by
           style, then pair them with practical guides on choosing sizes, building gallery walls and styling every
           room.
         </p>
         <h2>How it works</h2>
         <p>
-          Every piece you see is sold by its artist. When you find something you love, tap it and you will go
-          straight to the artist&apos;s listing to buy. Our collections refresh every day, so there is always
+          When you find something you love, tap it and you will go straight to the listing where it&apos;s sold. Our collections refresh every day, so there is always
           something new to discover.
         </p>
-        <h2>Supporting independent artists</h2>
+        <h2>Supporting artists</h2>
         <p>
-          Buying from independent makers means your walls are filled with work that has a story, and your purchase
+          Buying original art means your walls are filled with work that has a story, and your purchase
           supports a real person&apos;s creative business.
         </p>
         <h2>What&apos;s next</h2>
