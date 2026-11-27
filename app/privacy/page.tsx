@@ -11,7 +11,7 @@ export default function Privacy() {
     <section className="article">
       <div className="wrap narrow prose">
         <h1>Privacy policy</h1>
-        <p className="meta">Last updated November 23, 2026</p>
+        <p className="meta">Last updated November 27, 2026</p>
         <p>
           Your privacy matters to us. This policy explains what information WallGlamUp collects when you use this
           website and how we use it.

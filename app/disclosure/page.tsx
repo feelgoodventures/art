@@ -11,7 +11,7 @@ export default function Disclosure() {
     <section className="article">
       <div className="wrap narrow prose">
         <h1>Affiliate disclosure</h1>
-        <p className="meta">Last updated November 23, 2026</p>
+        <p className="meta">Last updated November 27, 2026</p>
         <p>
           WallGlamUp is a participant in affiliate programs, including programs run by the marketplaces we link to, such as Etsy, and affiliate networks such as Rakuten. This means that
           when you click a link on our site and make a purchase, we may earn a small commission. This comes at no
