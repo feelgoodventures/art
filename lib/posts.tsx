@@ -182,7 +182,7 @@ export const posts: Post[] = [
         </p>
         <p>
           Explore our full <Link href="/art/boho-wall-art">boho wall art</Link> collection, refreshed daily with new
-          pieces from independent artists.
+          original paintings.
         </p>
       </>
     ),
